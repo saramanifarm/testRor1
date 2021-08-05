@@ -4,4 +4,8 @@ class ArtisController < ApplicationController
         @artis = Artis.find(params[:id])
 
     end
+
+    def index
+        @articals = Artis.all
+    end
 end
