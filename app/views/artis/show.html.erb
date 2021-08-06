@@ -1,3 +1,7 @@
 <h1>Showing arti details</h1>
 <p><strong>Title:</strong><%= @artis.title %></p>
 <p><strong>Description:</strong><%= @artis.description %></p>
+
+<%= link_to 'Edit', edit_arti_path(@artis) %> |
+<%= link_to 'Delete', arti_path(@artis), method: :delete, data: { confirm: "Are you sure?"} %> |
+<%= link_to 'Return to artis listying', artis_path %>

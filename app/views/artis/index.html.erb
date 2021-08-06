@@ -5,19 +5,24 @@
 <tr>
 <th>Title</th>
 <th>Description</th>
-<th>Action</th>
+<th colspan = "3">Actions</th>
 </tr>
 </thead>
 <tbody>
-<% @articals.each do |article| %>
+<% @artis.each do |arti| %>
 <tr>
-<td><%= article.title %>
+<td><%= arti.title %>
 </td>
-<td><%= article.description %>
+<td><%= arti.description %>
 </td>
-<td>Some action
+<td><%= link_to 'Show', arti_path(arti) %> </td>
+<td><%= link_to 'Edit', edit_arti_path(arti) %> </td>
+<td><%= link_to 'Delete', arti_path(arti), method: :delete, data: { confirm: "Are you sure?"} %>
 </td>
 </tr>
 <% end %>
 </tbody>
 </table>
+<p>
+<%= link_to 'create new arti', new_arti_path %>
+</p>
